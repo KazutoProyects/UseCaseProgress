@@ -33,7 +33,8 @@
               "src/assets/styles/red-theme.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/KazutoProyects/UseCaseProgress/"
           },
           "configurations": {
             "production": {
