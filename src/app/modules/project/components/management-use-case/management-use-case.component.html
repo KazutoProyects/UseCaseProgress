@@ -1,0 +1,39 @@
+<div class="body align-items-center">
+    <div class="containerr h-90 w-90">
+        <div class="row align-items-center h-100">
+            <div class="text-center">
+                <h1>- Management Use Case - </h1>
+            </div>
+            <!-- Lado Izquierdo -->
+            <div class="col-md-6">
+                <button class="button-add" ><mat-icon>folder</mat-icon> <p>Create Use Case</p></button>
+            </div>
+            <!-- Lado Derecho -->
+            <div class="col-md-6">
+                <div class="text-center col-md-12">
+                    <h1>- {{useCaseTittle}} - </h1>
+                </div>
+                <form [formGroup]="formData" class="col-md-12" >
+                    <div class="form-group row">
+                        <mat-form-field class="col-md-6" appearance="outline">
+                            <mat-label>Folder:</mat-label>
+                            <input matInput formControlName="folder" required>
+                        </mat-form-field>
+                        <mat-form-field class="col-md-6" appearance="outline">
+                            <mat-label>Name:</mat-label>
+                            <input matInput formControlName="name" required>
+                        </mat-form-field>
+                        <mat-form-field class="col-md-12" appearance="outline">
+                            <mat-label>Descripcion</mat-label>
+                            <textarea matInput formControlName="name" required></textarea>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-group row">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>
+

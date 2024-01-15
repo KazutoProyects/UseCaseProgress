@@ -1,0 +1,30 @@
+    <div class="container">
+        <div class="row align-items-center" style="padding: 20px;">
+        <!-- Lado Izquierdo -->
+        <h1 class="text-center">- User Management - </h1>
+        <div class="col-md-6">
+            <div>
+            <p>Users in the project:</p>
+            <mat-chip-listbox>    
+                <mat-chip *ngFor="let user of usersProject" (removed)="deleteName(user)">
+                  {{ user.getName() }}
+                  <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+              </mat-chip-listbox>
+            </div>
+        </div>
+        <!-- Lado Derecho -->
+        <div class="col-md-6 align-items-center flex-direcction-column">
+            <mat-form-field class="col-md-12" appearance="outline">
+                <mat-label>Select</mat-label>
+                <mat-select multiple  [(ngModel)]="selectedUsers">
+                    <mat-option *ngFor="let user of allUsers" [value]="user">{{ user.getName() }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="col-12 boton" (click)="addUsersToProject()"><mat-icon>add</mat-icon> Add users </button>
+            
+        </div>
+        </div>
+    </div>    
+
+

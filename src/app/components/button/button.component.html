@@ -1,0 +1,9 @@
+<button mat-raised-button color="primary" (click)="executeCommand(data)" class="col-md-12">
+    <div *ngIf="charge" style="display: flex; align-items: center;" >
+        <mat-spinner diameter="24" color="accent" style="margin-right: 10px;"></mat-spinner>
+        {{ labelCharge }}
+    </div>
+    <div *ngIf= "!charge">
+        {{ label }}
+    </div>
+</button>

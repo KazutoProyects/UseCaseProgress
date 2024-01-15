@@ -1,0 +1,89 @@
+$purple-palette: (
+  550 : #eff4f5,
+  100 : #d6e4e7,
+  200 : #bbd2d7,
+  300 : #9fc0c7,
+  400 : #8bb3bb,
+  500 : #76a5af,
+  600 : #6e9da8,
+  700 : #63939f,
+  800 : #598a96,
+  900 : #467986,
+  A100 : #e0f9ff,
+  A200 : #adeeff,
+  A400 : #7ae3ff,
+  A700 : #61ddff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+.body{
+    height: 100%;
+    background-color: map-get($map: $purple-palette, $key: 100);
+}
+
+.container-fluid{
+    height: 250px; 
+    width: 100% ; 
+    margin:0;
+    padding: 0;
+}
+
+
+.row{
+    height: 100%; 
+    width: 80%;
+    margin:0;
+}
+
+.button{
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    background-color: map-get($map: $purple-palette, $key: 300);
+    display:flex;
+    justify-content: center;
+    align-items: center
+}
+.button-add{
+    padding: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-color: map-get($map: $purple-palette, $key: 900);
+}
+
+button mat-icon{
+    color: map-get($map: $purple-palette, $key: 900);
+}
+
+.button-add p{
+    margin: 0 5px 0 10px;
+}
+
+.tittle{
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.sub-tittle{
+    font-size: 35px;
+    padding:5px;
+    color: map-get($map: $purple-palette, $key: 900);
+
+}

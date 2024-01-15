@@ -1,0 +1,40 @@
+.project-card {
+    position: relative; /* Importante para posicionar elementos hijos de manera absoluta */
+    height: 216px; 
+    width: 350px; 
+    background-color: white;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h1 {
+    font-size: 1.5em; /* Tamaño del título */
+    color: #333; /* Color del texto del título */
+    margin-bottom: 10px; /* Espacio inferior entre el título y la descripción */
+    padding-top: 10px;
+    text-align: center; /* Centrar el texto del título */
+    text-decoration: underline; /* Añadiendo subrayado */
+    font-style: italic;
+}
+
+.project-card p.description {
+    font-size: 1em; /* Tamaño del texto de descripción */
+    color: #666; /* Color del texto de descripción */
+    margin-bottom: 5px; /* Espacio inferior entre los párrafos */
+    margin: 0 20px 0 20px;
+}
+
+.project-card p.footer {
+    position: absolute; /* Posicionamiento absoluto para el footer */
+    bottom: 0; /* En la parte inferior */
+    right: 0; /* A la derecha */
+    font-style: italic; /* Estilo cursiva para el footer */
+    color: #888; /* Color del texto del footer */
+    margin-right: 5px;
+}

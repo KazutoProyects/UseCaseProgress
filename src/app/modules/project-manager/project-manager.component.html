@@ -1,0 +1,46 @@
+<div class="body">
+    <h1 class = "tittle">WELCOME {{getNameUser()}}</h1>
+    <button class="button-add" (click)="openDialog()"><mat-icon>folder</mat-icon> <p>Create Project</p></button>
+    <h1 class="sub-tittle ">My Projects: </h1>
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <button class=" button" (click)="back()">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                <app-card [card] = "myProjectListCurrent[0]" (click)="navegateToProject(myProjectListCurrent[0].getId())"></app-card>
+            </div>
+            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                <app-card [card] = "myProjectListCurrent[1]" (click)="navegateToProject(myProjectListCurrent[1].getId())"></app-card>
+            </div>
+            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                <app-card [card] = "myProjectListCurrent[2]" (click)="navegateToProject(myProjectListCurrent[2].getId())"></app-card>
+            </div>
+        </div>
+        <button class=" button" (click)="next()">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+    <h1 class="sub-tittle ">Projects: </h1>
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <button class=" button" (click)="back2()">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-center justify-content-center ">
+                <app-card [card] = "projectListCurrent[0]" (click)="navegateToProject(projectListCurrent[0].getId())"></app-card>
+            </div>
+            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                <app-card [card] = "projectListCurrent[1]" (click)="navegateToProject(projectListCurrent[1].getId())"></app-card>
+            </div>
+            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                <app-card [card] = "projectListCurrent[2]" (click)="navegateToProject(projectListCurrent[2].getId())"></app-card>
+            </div>
+        </div>
+        <button class="button" (click)="next2()">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+</div>
+
+

@@ -1,0 +1,75 @@
+$purple-palette: (
+  50 : #eff4f5,
+  100 : #d6e4e7,
+  200 : #bbd2d7,
+  300 : #9fc0c7,
+  400 : #8bb3bb,
+  500 : #76a5af,
+  600 : #6e9da8,
+  700 : #63939f,
+  800 : #598a96,
+  900 : #467986,
+  A100 : #e0f9ff,
+  A200 : #adeeff,
+  A400 : #7ae3ff,
+  A700 : #61ddff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+.body{
+    height: 100%;
+    background-color: map-get($map: $purple-palette, $key: 100);
+    
+}
+.container {
+    height: 100%;
+    background-color: map-get($map: $purple-palette, $key: 50);
+    border: 2px solid map-get($map: $purple-palette, $key: 400);
+    border-radius: 10px; /* Borde redondeado */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divider {
+    height: 1px;
+    background-color: #dee2e6; 
+    margin: 10px 0;
+  }
+.flex-direcction-column{
+    flex-direction: column
+}
+.boton{
+  margin-bottom: 10px;
+}
+
+.vertical-header {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.mat-row, .mat-header-row {
+  border-bottom: 1px solid #000000; /* Línea horizontal entre filas */
+}
+
+.mat-cell, .mat-header-cell {
+  border-right: 1px solid #000000; /* Línea vertical entre celdas */
+}
