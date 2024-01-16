@@ -58,12 +58,20 @@ export class Project{
     this.startProject = startProject;
   }
 
-  setUseCase(useCase:UseCase){
+  addUseCase(useCase:UseCase){
     this.useCases.push(useCase);
+  }
+
+  setUseCases(useCase:UseCase[]){
+    this.useCases = useCase;
   }
 
   addMilestone(milestone:Milestone){
     this.milestones.push(milestone);
+  }
+  
+  setTechnologies(technologies:Technologie[]){
+    this.technologies = technologies;
   }
 
   getId(){
@@ -96,6 +104,10 @@ export class Project{
 
   getUseCases(){
     return this.useCases;
+  }
+
+  getTechnologies(){
+    return this.technologies;
   }
   
 }

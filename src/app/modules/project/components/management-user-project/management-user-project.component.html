@@ -16,7 +16,7 @@
         <!-- Lado Derecho -->
         <div class="col-md-6 align-items-center flex-direcction-column">
             <mat-form-field class="col-md-12" appearance="outline">
-                <mat-label>Select</mat-label>
+                <mat-label>Users selected</mat-label>
                 <mat-select multiple  [(ngModel)]="selectedUsers">
                     <mat-option *ngFor="let user of allUsers" [value]="user">{{ user.getName() }}</mat-option>
                 </mat-select>

@@ -7,7 +7,8 @@ export class UseCase {
     folder:string = "";
     description:string = "";
     technologies: Technologie[] = [];
-
+    technologiesDelete: Technologie[] = [];
+ 
     constructor(name:string){
         this.name = name;
     }

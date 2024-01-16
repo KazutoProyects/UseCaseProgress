@@ -5,8 +5,31 @@
                 <h1>- Management Use Case - </h1>
             </div>
             <!-- Lado Izquierdo -->
-            <div class="col-md-6">
-                <button class="button-add" ><mat-icon>folder</mat-icon> <p>Create Use Case</p></button>
+            <div class="col-md-6 row justify-content-center">
+                <section class="mat-elevation-z4 mb-4 mt-4 col-md-12" tabindex="0" tabindex="0">
+                    <mat-table [dataSource]="allUseCases">
+                        <ng-container matColumnDef="name">
+                            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                          </ng-container>
+                        <ng-container matColumnDef="folder">
+                            <mat-header-cell *matHeaderCellDef> Folder </mat-header-cell>
+                            <mat-cell *matCellDef="let element"> {{element.folder}} </mat-cell>
+                         </ng-container>
+                        <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+                        <mat-row
+                            (click) = "clickRow(row)"
+                            [class.demo-row-is-clicked] = "clickedRow == row"
+                            *matRowDef="let row; columns: displayedColumns;">
+                        </mat-row>
+                    </mat-table>
+                </section>
+                
+                <button mat-raised-button color="primary" class="col-5 boton m-1"><mat-icon style="color:black">add</mat-icon> Create </button>
+                <button mat-raised-button color="warn" class="col-5 boton m-1"><mat-icon style="color:white">delete</mat-icon> Delete </button>
+                <button mat-raised-button color="primary" class="col-5 boton m-1"><mat-icon style="color:black">file_copy</mat-icon> Clone </button>
+                <button mat-raised-button color="primary" class="col-5  boton m-1"><mat-icon style="color:black">edit</mat-icon> Edit </button>
+                
             </div>
             <!-- Lado Derecho -->
             <div class="col-md-6">
@@ -14,19 +37,27 @@
                     <h1>- {{useCaseTittle}} - </h1>
                 </div>
                 <form [formGroup]="formData" class="col-md-12" >
-                    <div class="form-group row">
+                    <div class="form-group row justify-content-center">
                         <mat-form-field class="col-md-6" appearance="outline">
                             <mat-label>Folder:</mat-label>
-                            <input matInput formControlName="folder" required>
+                            <input matInput formControlName="folder" [readonly]="readOnlyForm" required>
                         </mat-form-field>
                         <mat-form-field class="col-md-6" appearance="outline">
                             <mat-label>Name:</mat-label>
-                            <input matInput formControlName="name" required>
+                            <input matInput formControlName="name" required [readonly]="readOnlyForm">
                         </mat-form-field>
                         <mat-form-field class="col-md-12" appearance="outline">
                             <mat-label>Descripcion</mat-label>
-                            <textarea matInput formControlName="name" required></textarea>
+                            <textarea matInput formControlName="description" required [readonly]="readOnlyForm"></textarea>
                         </mat-form-field>
+                        <mat-form-field class="col-md-12" appearance="outline" >
+                            <mat-label>Technologies</mat-label>
+                            <mat-select multiple  formControlName="selectedTechnologies" appearance="outline">
+                                <mat-option *ngFor="let technologie of allTecnologies" [value]="technologie">{{ technologie.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <button mat-raised-button color="primary" class="col-5 boton m-3"><mat-icon style="color:black">save</mat-icon> Save </button>
+                        <button mat-raised-button color="warn" class="col-5 boton m-3"><mat-icon style="color:white">close</mat-icon> Cancel </button>
                     </div>
                     <div class="form-group row">
                         

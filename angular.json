@@ -33,8 +33,7 @@
               "src/assets/styles/red-theme.scss",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "baseHref": "/KazutoProyects/UseCaseProgress/"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -99,6 +98,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

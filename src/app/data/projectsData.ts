@@ -23,6 +23,82 @@ export const PROJECTS = [
                 name: "First Milestone"
             }
         ],
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase2",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase3",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase4",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase2",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase3",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase4",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase2",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase3",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase4",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase2",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase3",
+                folder:"useCaseFolder/folder"
+            },
+            {
+                name:"useCase4",
+                folder:"useCaseFolder/folder"
+            }
+        ]
 
     },
     {
@@ -48,7 +124,24 @@ export const PROJECTS = [
         ],
         name: "Click me pls",
         idCreator: "123",
-        endDate: 1245
+        endDate: 1245,
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            }
+        ]
+
     },
     {
         id: "2",
@@ -74,6 +167,23 @@ export const PROJECTS = [
                 name: "First Milestone"
             }
         ],
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            }
+        ]
+
     },
     {
         id: "3",
@@ -99,6 +209,23 @@ export const PROJECTS = [
                 name: "First Milestone"
             }
         ],
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            }
+        ]
+
     },
     {
         id: "4",
@@ -124,6 +251,23 @@ export const PROJECTS = [
                 name: "First Milestone"
             }
         ],
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            }
+        ]
+
     },
     {
         id: "5",
@@ -149,6 +293,23 @@ export const PROJECTS = [
                 name: "First Milestone"
             }
         ],
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            }
+        ]
+
     },
     {
         id: "6",
@@ -174,6 +335,23 @@ export const PROJECTS = [
                 name: "First Milestone"
             }
         ],
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            }
+        ]
+
     },
     {
         id: "7",
@@ -199,6 +377,23 @@ export const PROJECTS = [
                 name: "First Milestone"
             }
         ],
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            }
+        ]
+
     },
     {
         id: "8",
@@ -224,6 +419,23 @@ export const PROJECTS = [
                 name: "First Milestone"
             }
         ],
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            }
+        ]
+
     },
     {
         id: "9",
@@ -249,6 +461,23 @@ export const PROJECTS = [
                 name: "First Milestone"
             }
         ],
+        technologies:[
+            {
+                name:"hmi",
+                weight: 10
+            },
+            {
+                name:"core",
+                weight: 20
+            }
+        ],
+        useCases:[
+            {
+                name:"useCase1",
+                folder:"useCaseFolder/folder"
+            }
+        ]
+
     },
 ]
 

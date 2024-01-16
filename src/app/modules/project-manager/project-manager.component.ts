@@ -14,6 +14,9 @@ import { Router } from '@angular/router';
 import { UserManager } from 'src/app/model';
 import { Milestone } from 'src/app/model/project/milestone/Milestone';
 import { MilestoneBuilder } from 'src/app/model/project/milestone/MilestoneBuilder';
+import { Technologie } from 'src/app/model/project/technologies/Technologie';
+import { UseCaseBuilder } from 'src/app/model/project/useCase/UseCaseBuilder';
+import { UseCase } from 'src/app/model/project/useCase/UseCase';
 
 
 @Component({
@@ -117,6 +120,18 @@ export class ProjectManagerComponent implements OnInit {
       return project.idUsers && project.idUsers.includes(this.authService.getCurrentUser().getId());
     });
     userProjects.forEach(userProject => {
+      let technologies:Technologie[] = []
+      userProject.technologies.forEach(technologie => {
+        technologies.push(new Technologie(technologie.name, technologie.weight));
+      });
+      let useCases:UseCase[] = []
+      userProject.useCases.forEach(useCase =>{
+        useCases.push(
+          new UseCaseBuilder(useCase.name)
+          .setFolder(useCase.folder)
+          .build()
+        )
+      });
       const milestone: Milestone = new MilestoneBuilder(userProject.milestones[0].name)
         .setOrder(0)
         .setStartMilestoneTimestamp(userProject.milestones[0].startMilestone)
@@ -129,9 +144,12 @@ export class ProjectManagerComponent implements OnInit {
         .setDaysPerIterations(userProject.milestones[0].daysPerIterations)
         .build();
       const project:Project = new ProjectBuilder(userProject.name, userProject.idCreator)
+        .setId(userProject.id)
         .setDescription(userProject.description)
         .setStartDate(userProject.startProject)
         .addMilestone(milestone)
+        .setTechnologies(technologies)
+        .setUseCases(useCases)
         .build();
       this.projects.addProject(project);
     });

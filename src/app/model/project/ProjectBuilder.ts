@@ -1,5 +1,7 @@
 import { Project } from "./Project";
 import { Milestone } from "./milestone/Milestone";
+import { Technologie } from "./technologies/Technologie";
+import { UseCase } from "./useCase/UseCase";
 
 export class ProjectBuilder {
     private project: Project;
@@ -8,6 +10,10 @@ export class ProjectBuilder {
     constructor(name: string, idCreator:string) {
         this.project = new Project(name, idCreator);
         this.concatenateUser(idCreator);
+    }
+    setId(id:string): ProjectBuilder{
+        this.project.setId(id);
+        return this;
     }
   
     setDescription(description: string): ProjectBuilder {
@@ -36,9 +42,20 @@ export class ProjectBuilder {
         });
         return this;
     }
+    setTechnologies(technologies: Technologie[]): ProjectBuilder{
+        this.project.setTechnologies(technologies)
+        return this;
+    }
+    
+    setUseCases(useCase: UseCase[]): ProjectBuilder{
+        this.project.setUseCases(useCase);
+        return this;
+    }
     
     build(): Project {
-        this.project.setId(this.generateRandomId());
+        if(this.project.getId() == ""){
+            this.project.setId(this.generateRandomId());
+        }
         this.project.setIdUsers(this.idUsers);
         return this.project;
     }

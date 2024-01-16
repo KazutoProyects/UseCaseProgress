@@ -16,6 +16,7 @@ import { ManagementUseCaseComponent } from './components/management-use-case/man
 import { RouterModule, Routes } from '@angular/router';
 import { PlanningComponent } from './components/planning/planning.component';
 import { SimpleTableComponent } from 'src/app/components/table/simple-table/simple-table.component';
+import { MatTableModule } from '@angular/material/table';
 
 const routes: Routes = [
   { path: '', component: ProjectComponent },
@@ -45,6 +46,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     MatSelectModule,
+    MatTableModule,
   ],
   exports:[RouterModule]
 })
