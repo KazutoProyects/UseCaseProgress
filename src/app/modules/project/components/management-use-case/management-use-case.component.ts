@@ -76,4 +76,17 @@ export class ManagementUseCaseComponent {
     this.cambiarValorDeCampo('selectedTechnologies', []);
   }
 
+  clickButton(action:string):void{
+    switch(action){
+      case "cloneProject":
+        if(this.clickedRow != undefined){
+          const cloneUseCase: UseCase = this.clickedRow.clone();
+          this.project?.addUseCase(cloneUseCase);
+          this.allUseCases = [...this.project?.getUseCases() ?? this.allUseCases];
+          console.log(this.allUseCases  )
+        }
+        break;
+    }
+  }
+
 }
